@@ -1,10 +1,6 @@
-#footer {
-    background: #333333;
-    color: #ffffff;
-    text-align: center;
+th, td {
     padding: 10px;
-    margin-top: 30px;
-}
+    }
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -19,9 +15,5 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-    }
-}
+
+

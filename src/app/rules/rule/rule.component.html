@@ -1,0 +1,51 @@
+<form class="rle-form" #ruleForm="ngForm" (ngSubmit)="onSubmit(ruleForm)">
+  <input type="hidden" name="RuleID" #RuleID="ngModel" [(ngModel)]="ruleService.selectedRule.RuleID">
+  <div class="form-row">
+  <div class="form-group col-md-6">
+    <input class="form-control" name="Firewall_Device" #FirewallDevice="ngModel" [(ngModel)]="ruleService.selectedRule.Firewall_Device" placeholder="Firewall" required>
+    <div class="validation-error" *ngIf="FirewallDevice.invalid && FirewallDevice.touched">This Field is Required.</div>
+  </div>
+  <div class="form-group col-md-6">
+    <input class="form-control" name="Object_Group" #ObjectGroup="ngModel" [(ngModel)]="ruleService.selectedRule.Object_Group" placeholder="Object-Group" required>
+    <div class="validation-error" *ngIf="ObjectGroup.invalid && ObjectGroup.touched">This Field is Required.</div>
+  </div>
+  <div class="form-group col-md-12">
+    <input class="form-control" name="Application_Name" #ApplicationName="ngModel" [(ngModel)]="ruleService.selectedRule.Application_Name" placeholder="Application Name" required>
+    <div class="validation-error" *ngIf="ApplicationName.invalid && ApplicationName.touched">This Field is Required.</div>
+  </div>
+  <div class="form-group col-md-6">
+    <input class="form-control" name="Hostname" #Hostname="ngModel" [(ngModel)]="ruleService.selectedRule.Hostname" placeholder="Hostname" required>
+    <div class="validation-error" *ngIf="Hostname.invalid && Hostname.touched">This Field is Required.</div>
+  </div>
+  <div class="form-group col-md-6">
+    <input class="form-control" name="IP_Address" #IPAddress="ngModel" [(ngModel)]="ruleService.selectedRule.IP_Address" placeholder="IP Address" required>
+    <div class="validation-error" *ngIf="IPAddress.invalid && IPAddress.touched">This Field is Required.</div>
+  </div>
+  <div class="form-group col-md-6">
+    <input class="form-control" name="FirstName" #FirstName="ngModel" [(ngModel)]="ruleService.selectedRule.FirstName" placeholder="First Name" required>
+    <div class="validation-error" *ngIf="FirstName.invalid && FirstName.touched">This Field is Required.</div>
+  </div>
+  <div class="form-group col-md-6">
+    <input class="form-control" name="LastName" #LastName="ngModel" [(ngModel)]="ruleService.selectedRule.LastName" placeholder="LastName" required>
+    <div class="validation-error" *ngIf="LastName.invalid && LastName.touched">This Field is Required.</div>
+  </div>
+</div>
+<div class="form-group col-md-12">
+  <input class="form-control" name="ACL1" #ACL="ngModel" [(ngModel)]="ruleService.selectedRule.ACL1" placeholder="Firewall Rule">
+  <div class="validation-error" *ngIf="ACL.invalid && ACL.touched">This Field is Required.</div>
+</div>
+<div class="form-group col-md-12">
+  <input class="form-control" name="Final_Business_Justification" #FinalBusinessJustification="ngModel" [(ngModel)]="ruleService.selectedRule.Final_Business_Justification" placeholder="Justification">
+  <div class="validation-error" *ngIf="FinalBusinessJustification.invalid && FinalBusinessJustification.touched">This Field is Required.</div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-8">
+    <button [disabled]="!ruleForm.valid" type="submit" class="btn btn-lg btn-block btn-info"><i class="fa fa-floppy-o"></i> Submit</button>
+  </div>
+  <div class="form-group col-md-4">
+    <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(ruleForm)"><i class="fa fa-repeat"></i> Reset</button>
+  </div>
+</div>
+</form>
+
+

@@ -1,0 +1,37 @@
+<br>
+<br>
+<div class="table-responsive">
+    <thead class="thead-dark">
+        <tr>
+          <th>Firewall_Device</th>
+          <th>Object_Group</th>
+          <th>Application_Name</th>
+          <th>Hostname</th>
+          <th>IP_Address</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>ACL</th>
+          <th>Justification</th>
+          <th></th>
+        </tr>
+        </thead>
+  <tr *ngFor="let rule of ruleService.ruleList">
+    <td>{{rule.Firewall_Device}}</td>
+    <td>{{rule.Object_Group}}</td>
+    <td>{{rule.Application_Name}}</td>
+    <td>{{rule.Hostname}}</td>
+    <td>{{rule.IP_Address}}</td>
+    <td>{{rule.FirstName}}</td>
+    <td>{{rule.LastName}}</td>
+    <td>{{rule.ACL1}}</td>
+    <td>{{rule.Final_Business_Justification}}</td>
+    <td>
+      <a class="btn" (click)="showForEdit(rule)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(rule.RuleID)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</div>

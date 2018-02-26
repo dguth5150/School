@@ -1,0 +1,19 @@
+<nav class="navbar navbar-inverse navbar-static-top" *ngIf="nav.visible">
+  <div class="container-fluid">
+    <div class="navbar-header" style="border-radius: none">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">  
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+      <a href="/users" class="navbar-brand">Audit_Box - FPU</a>
+    </div>
+    <div class="nav-collapse">
+      <ul class="nav navbar-nav">
+          <li routerLinkActive="active"><a routerLink="/users">Users</a></li>
+          <li routerLinkActive="active"><a routerLink="/rules">Rules</a></li>
+          <li routerLinkActive="active"><a (click)="LogOut()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
